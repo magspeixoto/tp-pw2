@@ -10,12 +10,33 @@
   flex-direction: row;
 }
 
-header {
+
+
+.header{
   height: 100vh;
   width: 15vw;
 }
+header {
+  height: 100%;
+  width: 100%;
+}
 
-main {
+
+
+.content{
   height: 100vh;
   width: 85vw;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  height: 94%;
+  width: 100%;
+}
+
+footer{
+  height: 6%;
+  width: 100%;
+  border: 1px solid red;
 }

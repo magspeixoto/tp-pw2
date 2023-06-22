@@ -12,13 +12,15 @@ import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ComprarAcoesComponent } from './comprar-acoes/comprar-acoes.component';
+import { RodapeAcoesComponent } from './rodape-acoes/rodape-acoes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaginaInicialComponent,
     NavbarComponent,
-    ComprarAcoesComponent
+    ComprarAcoesComponent,
+    RodapeAcoesComponent
   ],
   imports: [
     BrowserModule,
