@@ -28,14 +28,14 @@
     </li>
     <li class="nav-item">
       <a class="nav-link">
-        <button>
+        <button [routerLink]="['/carteira-acoes']" routerLinkActive="activebutton" (click)="reloadPage('/carteira-acoes')">
           Carteira
         </button>
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link">
-        <button>
+        <button [routerLink]="['/my-watchlist']" routerLinkActive="activebutton" (click)="reloadPage('/my-watchlist')">
           My WatchList
         </button>
       </a>
