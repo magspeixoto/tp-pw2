@@ -1,43 +1,48 @@
-<div class='card'>
-    <div class='card-header'>
-      Carteira de ações
-    </div>
-    <div class='card-body'>
-      <div class='table-responsive'>
-        <table class='table' *ngIf="acoes.length">
-          <thead>
-            <tr>
-              <th>Ticker</th>
-              <th>Empresa</th>
-              <th>Data</th>
-              <th>Quantidade</th>
-              <th>Preco unitário</th>
-              <th>Total investido</th>
-              <th>Cotação do dia</th>
-              <th>Valorização hoje</th>
-              <th>Valor atual</th>
-              <th>Lucro/Prejuízo</th>
-              <th>%</th>
-              
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let item of acoes">
-                <td colspan="1">{{item.ticker}}</td>
-                <td colspan="1">{{item.empresa}}</td>
-                <td colspan="1">{{item.data}}</td>
-                <td colspan="1">{{item.quantidade}}</td>
-                <td colspan="1">{{item.preco_unitario | currency:'USD': 'symbol': '1.2-2'}}</td>
-                <td colspan="1">{{item.quantidade * item.preco_unitario  | currency:'USD': 'symbol': '1.2-2'}}</td>
-                <td colspan="1"><!--{{ 'API 1' }}--></td>
-                <td colspan="1"><!--{{ 'API 2' }}--></td>
-                <td colspan="1"><!--{{ 'item.quantidade * API 1' }}--></td>
-                <td colspan="1"><!--{{ '(item.quantidade * API 1) - (item.quantidade * item.preco_unitario)'}}--></td>
-                <td colspan="1"><!--{{ '(((item.quantidade * API 1) - (item.quantidade * item.preco_unitario)) / (item.quantidade * item.preco_unitario)) * 100 '}}--></td>
-              </tr>
-          </tbody>
-        </table>
-      </div>
-  
-    </div>
-  </div>
+<div class="title">
+  <h1>Carteira de ações</h1>
+</div>
+<div class="content">
+  <table class="table" *ngIf="acoes.length">
+    <thead>
+      <tr>
+        <th>Ticker</th>
+        <th>Empresa</th>
+        <th>Data</th>
+        <th>Quantidade</th>
+        <th>Preco unitário</th>
+        <th>Total investido</th>
+        <th>Cotação do dia</th>
+        <th>Valorização hoje</th>
+        <th>Valor atual</th>
+        <th>Lucro/Prejuízo</th>
+        <th>%</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of acoes">
+        <td colspan="1">{{item.ticker}}</td>
+        <td colspan="1">{{item.empresa}}</td>
+        <td colspan="1">{{item.data}}</td>
+        <td colspan="1">{{item.quantidade}}</td>
+        <td colspan="1">{{item.preco_unitario | currency:'USD': 'symbol': '1.2-2'}}</td>
+        <td colspan="1">{{item.quantidade * item.preco_unitario  | currency:'USD': 'symbol': '1.2-2'}}</td>
+        <td colspan="1">
+          <!--{{ 'API 1' }}-->
+        </td>
+        <td colspan="1">
+          <!--{{ 'API 2' }}-->
+        </td>
+        <td colspan="1">
+          <!--{{ 'item.quantidade * API 1' }}-->
+        </td>
+        <td colspan="1">
+          <!--{{ '(item.quantidade * API 1) - (item.quantidade * item.preco_unitario)'}}-->
+        </td>
+        <td colspan="1">
+          <!--{{ '(((item.quantidade * API 1) - (item.quantidade * item.preco_unitario)) / (item.quantidade * item.preco_unitario)) * 100 '}}-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
