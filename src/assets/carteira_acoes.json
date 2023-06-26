@@ -1,0 +1,71 @@
+[{
+    "ticker": "TLSA",
+    "empresa": "Tesla",
+    "data": "2023-06-20",
+    "quantidade": "100",
+    "preco_unitario": "240.60"
+  },
+  {
+    "ticker": "NVDA",
+    "empresa": "NVIDIA",
+    "data": "2023-06-19",
+    "quantidade": "80",
+    "preco_unitario": "400.09"
+  },
+  {
+    "ticker": "META",
+    "empresa": "Meta Platforms Inc",
+    "data": "2023-06-18",
+    "quantidade": "100",
+    "preco_unitario": "270.67"
+  },
+  {
+    "ticker": "AAPL",
+    "empresa": "Apple",
+    "data": "2023-06-10",
+    "quantidade": "200",
+    "preco_unitario": "190.71"
+  },
+  {
+    "ticker": "AMZN",
+    "empresa": "Amazon",
+    "data": "2023-06-12",
+    "quantidade": "150",
+    "preco_unitario": "200.34"
+  },
+  {
+    "ticker": "AMD",
+    "empresa": "AMD",
+    "data": "2023-06-15",
+    "quantidade": "170",
+    "preco_unitario": "100.30"
+  },
+  {
+    "ticker": "MSFT",
+    "empresa": "Microsoft",
+    "data": "2023-06-17",
+    "quantidade": "180",
+    "preco_unitario": "300.54"
+  },
+  {
+    "ticker": "GOOGL",
+    "empresa": "Alphabet A",
+    "data": "2023-06-01",
+    "quantidade": "120",
+    "preco_unitario": "130.23"
+  },
+  {
+    "ticker": "HD",
+    "empresa": "Home Depot",
+    "data": "2023-06-02",
+    "quantidade": "130",
+    "preco_unitario": "270.65"
+  },
+  {
+    "ticker": "ADBE",
+    "empresa": "Adobe",
+    "data": "2023-06-03",
+    "quantidade": "400",
+    "preco_unitario": "380.75"
+  }
+]

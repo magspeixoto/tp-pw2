@@ -14,6 +14,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ComprarAcoesComponent } from './comprar-acoes/comprar-acoes.component';
 import { RodapeAcoesComponent } from './rodape-acoes/rodape-acoes.component';
 
+
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,8 @@ import { RodapeAcoesComponent } from './rodape-acoes/rodape-acoes.component';
     BrowserModule,
     AppRoutingModule,
     TooltipModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

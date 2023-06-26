@@ -9,13 +9,85 @@
   flex-direction: column;
 }
 
-.card {
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 20px;
-  max-width: 15%;
-  min-height: 100%;
+
+
+@mixin white-gradient {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 7))
+  }
+}
+
+
+
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    @include white-gradient;
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+
+  .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+
+  .slide {
+    height: 100px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #1ca817;
+  }
+}
+
+.title-text{
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+
+  color: #374151;
+  font-weight: 130;
+}
+
+.dados{
+  padding-top: 1rem;
+  color: #1F2937;
+  font-size: -0.75rem;
+  font-weight: 700;
 }
 
 .title {
@@ -25,42 +97,9 @@
   padding: 0px;
 }
 
-
-.title span {
-  margin-left: 0.5rem;
-  margin-bottom: 0.5rem;
-  position: relative;
-  padding: 0.5rem;
-  background-color: #10B981;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 9999px;
-}
-
-
-.title span svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  height: 1rem;
-}
-
 .title-text {
   margin-top: 0.5rem;
-  margin-left: 0.5rem;
+  padding-right: 1rem;
   color: #374151;
-  font-size: -0.75rem;
-}
-
-.data {
-  padding-left: 1rem;
-}
-
-.data p {
-  padding-top: 0.5rem;
-  color: #1F2937;
-  font-size: -0.75rem;
-  font-weight: 700;
+  font-weight: 130;
 }
