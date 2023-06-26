@@ -12,6 +12,7 @@ import { RodapeAcoesComponent } from './rodape-acoes/rodape-acoes.component';
 import { NovaCarteiraComponent } from './nova-carteira/nova-carteira.component';
 import { MyWatchlistComponent } from './my-watchlist/my-watchlist.component';
 import { CarteiraAcoesComponent } from './carteira-acoes/carteira-acoes.component';
+import { ActionCardComponent } from './action-card/action-card.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CarteiraAcoesComponent } from './carteira-acoes/carteira-acoes.componen
     NovaCarteiraComponent,
     MyWatchlistComponent,
     CarteiraAcoesComponent,
+    ActionCardComponent,
   ],
   imports: [
     BrowserModule,
