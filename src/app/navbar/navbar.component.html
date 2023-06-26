@@ -14,14 +14,14 @@
   <ul class="nav flex-column">
     <li class="nav-item">
       <a class="nav-link active" aria-current="page">
-        <button>
+        <button [routerLink]="['/pagina-inicial']" routerLinkActive="activebutton" (click)="reloadPage('/pagina-inicial')">
           Página Inicial
         </button>
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link">
-        <button>
+        <button [routerLink]="['/comprar-acoes']" routerLinkActive="activebutton" (click)="reloadPage('/comprar-acoes')">
           Ações
         </button>
       </a>

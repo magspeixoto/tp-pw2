@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  constructor(
+    public router: Router
+    ) 
+    {
+    }
+
+
+
+  reloadPage(route: string) {
+    const currentRoute = this.router.url;
+    if (currentRoute === route) {
+      window.location.reload();
+    }
+  }
 }
