@@ -1,16 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-interface Acoes {
-  ticker: string;
-  empresa: string;
-  data: Date;
-  quantidade: number;
-  preco_unitario: number;
-  api1: number;
-  api2: number;
-}
-
+import { Acoes } from '../models/acoes'
 @Component({
   selector: 'app-carteira-acoes',
   templateUrl: './carteira-acoes.component.html',

@@ -8,6 +8,13 @@
   justify-content: center;
   flex-direction: column;
 }
+table {
+  border: 10px solid red;
+}
+
+.tb {
+  border: 10px solid green;
+}
 
 
 

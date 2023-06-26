@@ -32,8 +32,7 @@ import { ActionCardComponent } from './action-card/action-card.component';
     HttpClientModule,
     AppRoutingModule,
     TooltipModule.forRoot(),
-    BrowserAnimationsModule,
-    HttpClientModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

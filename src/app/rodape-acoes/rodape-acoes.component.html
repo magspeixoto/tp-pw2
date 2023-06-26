@@ -1,26 +1,13 @@
-<div class="rodaperotativo">
-  <!--
-    <div class="card">
-    <div class="title">
-      <p class="title-text">
-        Nome API
-      </p>
-      <div class="data">
-        <p>
-          9,999
-        </p>
-      </div>
-    </div>
-  -->
-<h2>Collect API Data</h2>
+
+
 <table>
-  <tr>
-    <th>NOME API 1</th>
+  
+  <tr *ngFor="let post of posts">
+    <th>{{ post.ticker }}></th>
   </tr>
-  <tr>
-    <td>{{newdata.symbol}}</td>
-  </tr>
-</table>
+
+<div class="rodaperotativo">
+
   <div class="slider">
     <div class="slide-track">
 
@@ -149,9 +136,20 @@
           9,999
         </p>
       </div>
-
+      
     </div>
   </div>
-
-
 </div>
+
+<!--
+    <div class="card">
+    <div class="title">
+      <p class="title-text">
+        Nome API
+      </p>
+      <div class="data">
+        <p>
+          9,999
+        </p>
+      </div>
+    </div>-->
