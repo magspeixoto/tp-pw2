@@ -14,6 +14,7 @@ import { MyWatchlistComponent } from './my-watchlist/my-watchlist.component';
 import { CarteiraAcoesComponent } from './carteira-acoes/carteira-acoes.component';
 import { ActionCardComponent } from './action-card/action-card.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,7 @@ import { ActionCardComponent } from './action-card/action-card.component';
     NovaCarteiraComponent,
     MyWatchlistComponent,
     CarteiraAcoesComponent,
-    ActionCardComponent,
+    ActionCardComponent
   ],
   imports: [
     BrowserModule,
