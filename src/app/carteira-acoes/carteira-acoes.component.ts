@@ -31,7 +31,7 @@ export class CarteiraAcoesComponent implements OnInit {
         console.log(this.acoes); // Add this line to check the received data
 
         this.acoes.forEach((item: Acoes) => {
-          const url = `https://api.iex.cloud/v1/data/core/quote/${item.ticker}?token=sk_e511acd46d734053beec96a280678778`;
+          const url = `https://api.iex.cloud/v1/data/core/quote/${item.ticker}?token=pk_8dee7373ead0449bbe6e727ea55263f8`;
           this.http.get(url).subscribe((response: any) => {
             const cotacao = parseFloat(response[0].latestPrice);
             const variacao = parseFloat(response[0].changePercent);
