@@ -22,19 +22,19 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let acao of acoes">
-              <td>{{ acao.ticker}}</td>
-              <td>{{ acao.empresa}}</td>
-              <td>{{ acao.data }}</td>
-              <td>{{ acao.quantidade}}</td>
-              <td>{{ acao.preco_unitario | currency:'USD': 'symbol': '1.2-2' }}</td>
-              <td>{{ acao.quantidade * acao.preco_unitario}}</td>
-              <td>{{ 'API 1'}}</td>
-              <td>{{ 'API 2'}}</td>
-              <td>{{ 'acao.quantidade * API 1'}}</td>
-              <td>{{ '(acao.quantidade * API 1)-(acao.quantidade * acao.preco_unitario)'}}</td>
-              <td>{{ '(((acao.quantidade * API 1)-(acao.quantidade * acao.preco_unitario))/(acao.quantidade * carteira.preco_unitario))*100'}}</td>
-            </tr>
+            <tr *ngFor="let item of acoes">
+                <td colspan="1">{{item.ticker}}</td>
+                <td colspan="1">{{item.empresa}}</td>
+                <td colspan="1">{{item.data}}</td>
+                <td colspan="1">{{item.quantidade}}</td>
+                <td colspan="1">{{item.preco_unitario | currency:'USD': 'symbol': '1.2-2'}}</td>
+                <td colspan="1">{{item.quantidade * item.preco_unitario  | currency:'USD': 'symbol': '1.2-2'}}</td>
+                <td colspan="1"><!--{{ 'API 1' }}--></td>
+                <td colspan="1"><!--{{ 'API 2' }}--></td>
+                <td colspan="1"><!--{{ 'item.quantidade * API 1' }}--></td>
+                <td colspan="1"><!--{{ '(item.quantidade * API 1) - (item.quantidade * item.preco_unitario)'}}--></td>
+                <td colspan="1"><!--{{ '(((item.quantidade * API 1) - (item.quantidade * item.preco_unitario)) / (item.quantidade * item.preco_unitario)) * 100 '}}--></td>
+              </tr>
           </tbody>
         </table>
       </div>
