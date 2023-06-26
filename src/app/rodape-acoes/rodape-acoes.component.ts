@@ -17,7 +17,7 @@ export class RodapeAcoesComponent {
   ngOnInit(){
     this._apiservice.getData().subscribe(res=> {
       this.newdata=res;
-    })
-  }
+    })
+  }
 
 }
