@@ -12,13 +12,19 @@ import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ComprarAcoesComponent } from './comprar-acoes/comprar-acoes.component';
+import { NovaCarteiraComponent } from './nova-carteira/nova-carteira.component';
+import { MyWatchlistComponent } from './my-watchlist/my-watchlist.component';
+import { CarteiraAcoesComponent } from './carteira-acoes/carteira-acoes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaginaInicialComponent,
     NavbarComponent,
-    ComprarAcoesComponent
+    ComprarAcoesComponent,
+    NovaCarteiraComponent,
+    MyWatchlistComponent,
+    CarteiraAcoesComponent
   ],
   imports: [
     BrowserModule,
