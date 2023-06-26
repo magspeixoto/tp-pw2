@@ -16,7 +16,7 @@
         <th>Valorização hoje</th>
         <th>Valor atual</th>
         <th>Lucro/Prejuízo</th>
-        <th>%</th>
+        <th>% Total</th>
 
       </tr>
     </thead>
@@ -29,11 +29,13 @@
         <td colspan="1">{{item.preco_unitario | currency:'USD': 'symbol': '1.2-2'}}</td>
         <td colspan="1">{{item.quantidade * item.preco_unitario  | currency:'USD': 'symbol': '1.2-2'}}</td>
         <td colspan="1"> {{ item.api1 | currency:'USD': 'symbol': '1.2-2' }} </td>
-        <td colspan="1"> {{ item.api2 | percent: '1.2-2' }} </td>
+        <td colspan="1" [ngStyle]="{ 'background-color': item.api2 > 0 ? 'green' : 'red', 'color': 'white' }">
+          {{ item.api2 | percent: '1.2-2' }}</td>
         <td colspan="1"> {{ (item.quantidade * item.api1) | currency:'USD': 'symbol': '1.2-2'}}</td>
         <td colspan="1"> {{ (item.quantidade * item.api1) - (item.quantidade * item.preco_unitario)| currency:'USD': 'symbol': '1.2-2'}}</td>
-        <td colspan="1"> {{ (((item.quantidade * item.api1) - (item.quantidade * item.preco_unitario)) / (item.quantidade * item.preco_unitario))   | percent: '1.2-2'}}
-        </td>
+        <td colspan="1" [ngStyle]="{ 'background-color': ((((item.quantidade * item.api1) - (item.quantidade * item.preco_unitario)) / (item.quantidade * item.preco_unitario)) > 0) ? 'green' : 'red', 'color': 'white' }">
+          {{ (((item.quantidade * item.api1) - (item.quantidade * item.preco_unitario)) / (item.quantidade * item.preco_unitario)) | percent: '1.2-2' }}</td>
+        
       </tr>
     </tbody>
   </table>
