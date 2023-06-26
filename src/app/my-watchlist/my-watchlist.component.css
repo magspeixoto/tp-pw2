@@ -1,0 +1,8 @@
+* {
+    margin: 30px;
+}
+
+.watchlist-countainer{
+    display: flex;
+    flex-wrap: wrap;
+}
