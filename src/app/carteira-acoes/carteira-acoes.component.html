@@ -1,1 +1,43 @@
-<p>carteira-acoes works!</p>
+<div class='card'>
+    <div class='card-header'>
+      Carteira de ações
+    </div>
+    <div class='card-body'>
+      <div class='table-responsive'>
+        <table class='table' *ngIf="acoes.length">
+          <thead>
+            <tr>
+              <th>Ticker</th>
+              <th>Empresa</th>
+              <th>Data</th>
+              <th>Quantidade</th>
+              <th>Preco unitário</th>
+              <th>Total investido</th>
+              <th>Cotação do dia</th>
+              <th>Valorização hoje</th>
+              <th>Valor atual</th>
+              <th>Lucro/Prejuízo</th>
+              <th>%</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let acao of acoes">
+              <td>{{ acao.ticker}}</td>
+              <td>{{ acao.empresa}}</td>
+              <td>{{ acao.data }}</td>
+              <td>{{ acao.quantidade}}</td>
+              <td>{{ acao.preco_unitario | currency:'USD': 'symbol': '1.2-2' }}</td>
+              <td>{{ acao.quantidade * acao.preco_unitario}}</td>
+              <td>{{ 'API 1'}}</td>
+              <td>{{ 'API 2'}}</td>
+              <td>{{ 'acao.quantidade * API 1'}}</td>
+              <td>{{ '(acao.quantidade * API 1)-(acao.quantidade * acao.preco_unitario)'}}</td>
+              <td>{{ '(((acao.quantidade * API 1)-(acao.quantidade * acao.preco_unitario))/(acao.quantidade * carteira.preco_unitario))*100'}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+    </div>
+  </div>
