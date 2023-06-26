@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { APICallService } from './apicall.service';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +6,6 @@ import { APICallService } from './apicall.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'apidata'; 
-  newdata:any;
-  constructor(private _apiservice: APICallService){
-    this._apiservice.getData().subscribe(res=> {
-      this.newdata=res;
-    })
-  }
+  title = 'bolsa-de-valores'; 
+  
 }
