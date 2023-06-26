@@ -1,14 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-interface Acoes {
-            ticker: string;
-            empresa: string;
-            data: Date;
-            quantidade: number;
-            preco_unitario: number;
-}
-
 @Component({
   selector: 'app-carteira-acoes',
   templateUrl: './carteira-acoes.component.html',
@@ -17,7 +9,8 @@ interface Acoes {
 export class CarteiraAcoesComponent implements OnInit{
  acoes : Acoes[] = [];
 
- constructor(private http: HttpClient) {}
+  result: any;
+  urlToJson = 'assets/carteira_acoes.json';
 
  ngOnInit(): void {
   console.log('ngOnInit called'); // Add this line to check if the method is being called

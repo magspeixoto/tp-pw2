@@ -13,6 +13,9 @@ import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ComprarAcoesComponent } from './comprar-acoes/comprar-acoes.component';
+import { RodapeAcoesComponent } from './rodape-acoes/rodape-acoes.component';
+
+
 import { NovaCarteiraComponent } from './nova-carteira/nova-carteira.component';
 import { MyWatchlistComponent } from './my-watchlist/my-watchlist.component';
 import { CarteiraAcoesComponent } from './carteira-acoes/carteira-acoes.component';
@@ -23,6 +26,7 @@ import { CarteiraAcoesComponent } from './carteira-acoes/carteira-acoes.componen
     PaginaInicialComponent,
     NavbarComponent,
     ComprarAcoesComponent,
+    RodapeAcoesComponent,
     NovaCarteiraComponent,
     MyWatchlistComponent,
     CarteiraAcoesComponent
@@ -32,7 +36,8 @@ import { CarteiraAcoesComponent } from './carteira-acoes/carteira-acoes.componen
     HttpClientModule,
     AppRoutingModule,
     TooltipModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
