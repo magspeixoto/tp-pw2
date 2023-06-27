@@ -13,16 +13,16 @@
   </div>
 </ng-container> -->
 
-<div class="card" style="width: 18rem;">
+<ng-container class="container" *ngFor="let action of acoesWatchList" style="width: 5rem;">
   <img src="..." class="card-img-top" alt="...">
-  <ng-container class="container" *ngFor="let action of acoesWatchList" style="width: 5rem;">
+  <div class="container">
     <h5 class="card-title">{{action.api1}}</h5>
     <p class="card-text"></p>
     <p class="card-text"></p>
     <p class="card-text"></p>
     <button (click)="removeAction(action)" class="btn btn-primary">Remove Action</button>
-  </ng-container>
-</div>
+  </div>
+</ng-container>
 
 <!-- <div class="watchlist-countainer">
   <div class="card-group">
