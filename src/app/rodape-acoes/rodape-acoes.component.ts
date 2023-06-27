@@ -10,19 +10,22 @@ import { ActivatedRoute } from '@angular/router';
 
 export class RodapeAcoesComponent implements OnInit{
   showNotFound = false;
-  public posts:Acoes;
+  public posts: Acoes = {};
   constructor(private route: ActivatedRoute, 
     private _apiservice: APICallService){}
 
   ngOnInit(){
     
-  this.route.params.subscribe((params) => {
-    this._apiservice
-      .getData(params['ticker'])
-      .subscribe({
-        next: (posts: Acoes) => (this.posts = posts),
-        error: () => (this.showNotFound = true),
+    this.route.params.subscribe((params) => {
+      this._apiservice.getData(params['ticker']).subscribe({
+        next: (posts: Acoes) => {
+          this.posts = posts;
+          this.showNotFound = false; // Reset the flag on successful response
+        },
+        error: () => {
+          this.showNotFound = true;
+        },
       });
-});
-   
-  }}
+    });
+}
+}
