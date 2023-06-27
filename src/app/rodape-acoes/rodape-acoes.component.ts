@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { APICallService } from '../services/apicall.service';
-import { HttpClient } from '@angular/common/http';
 import { Top10 } from '../models/top10';
 
 @Component({
@@ -22,7 +21,7 @@ export class RodapeAcoesComponent implements OnInit {
         const simbolo = item.symbol;
         const nome = item.companyName;
         const porcentagem = item.changePercent;
-        this.acoes.push({ api1: simbolo, api2: nome, api3: porcentagem });
+        this.acoes.push({ api1: simbolo, api2: nome, api3: porcentagem, api4: 0, api5: 0, api6: 0, api7: 0 });
       });
     }, (error) => {
       console.error('Error fetching data:', error);
