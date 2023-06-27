@@ -1,37 +1,31 @@
 <div class="title">
-  <h1>Ações</h1>
+  <h1>TOP 10 ações do dia:</h1>
 </div>
 <div class="content">
-  <table class="table">
+  <table class="table" *ngIf="acoes.length">
     <thead>
       <tr>
         <th scope="col">Ticker</th>
         <th scope="col">Empresa</th>
-        <th scope="col">Data</th>
-        <th scope="col">Quantidade</th>
-        <th scope="col">Preco unitário</th>
-        <th scope="col">Total investido</th>
-        <th scope="col">Cotação do dia</th>
-        <th scope="col">Valorização hoje</th>
+        <th scope="col">Valor da abertura</th>
         <th scope="col">Valor atual</th>
-        <th scope="col">Lucro/Prejuízo</th>
-        <th scope="col">%</th>
+        <th scope="col">Mudança</th>
+        <th scope="col">Mudança em %</th>
+        <th scope="col">Volume total</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td colspan="1"></td>
-        <td colspan="1"></td>
-        <td colspan="1"></td>
-        <td colspan="1"></td>
-        <td colspan="1"></td>
-        <td colspan="1"></td>
-        <td colspan="1"></td>
-        <td colspan="1"></td>
-        <td colspan="1"></td>
-        <td colspan="1"></td>
-        <td colspan="1"></td>
+      <tr *ngFor="let item of acoes">
+        <td>{{item.api1}}</td>
+        <td>{{item.api2}}</td>
+        <td>{{item.api3 | currency:'USD': 'symbol': '1.2-2'}}</td>
+        <td>{{item.api4 | currency:'USD': 'symbol': '1.2-2'}}</td>
+        <td>{{item.api5 | currency:'USD': 'symbol': '1.2-2'}}</td>
+        <td colspan="1" [ngStyle]="{ 'background-color': item.api6 >= 0 ? 'green' : 'red', 'color': 'white' }">
+          {{ item.api6 | percent: '1.2-2' }}</td>
+        <td>{{item.api7 | currency:'USD': 'symbol': '1.2-2'}}</td>
       </tr>
     </tbody>
   </table>
 </div>
+
