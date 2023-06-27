@@ -35,7 +35,19 @@
         <td colspan="1"> {{ (item.quantidade * item.api1) - (item.quantidade * item.preco_unitario)| currency:'USD': 'symbol': '1.2-2'}}</td>
         <td colspan="1" [ngStyle]="{ 'background-color': ((((item.quantidade * item.api1) - (item.quantidade * item.preco_unitario)) / (item.quantidade * item.preco_unitario)) > 0) ? 'green' : 'red', 'color': 'white' }">
           {{ (((item.quantidade * item.api1) - (item.quantidade * item.preco_unitario)) / (item.quantidade * item.preco_unitario)) | percent: '1.2-2' }}</td>
-        
+      </tr>
+      <tr>
+        <td colspan="1" class="zero"></td>
+        <td colspan="1" class="zero"></td>
+        <td colspan="1" class="zero"></td>
+        <td colspan="1" class="zero"></td>
+        <th colspan="1">Total:</th>
+        <td colspan="1">total investido</td>
+        <td colspan="1"></td>
+        <td colspan="1"></td>
+        <td colspan="1">valor atual</td>
+        <td colspan="1"></td>
+        <td colspan="1">% total</td>
       </tr>
     </tbody>
   </table>
