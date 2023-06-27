@@ -4,12 +4,13 @@ import { Acoes } from '../models/acoes';
   providedIn: 'root'
 })
 export class WatchlistServiceService {
-
-  /*constructor(private http: HttpClient) { }
+/*
+  constructor(private http: HttpClient) { }
   
   getWatchList(ticker:string){
-    return.this.http.get<Acoes>
-  }*/
+    return this.http.get<Acoes>(``);
+  }
+*/
   
   
   /*
