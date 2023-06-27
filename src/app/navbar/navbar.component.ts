@@ -10,10 +10,7 @@ export class NavbarComponent {
 
   constructor(
     public router: Router
-    ) 
-    {
-    }
-
+    ) {}
 
 
   reloadPage(route: string) {

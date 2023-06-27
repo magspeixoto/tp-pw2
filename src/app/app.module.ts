@@ -13,6 +13,7 @@ import { NovaCarteiraComponent } from './nova-carteira/nova-carteira.component';
 import { MyWatchlistComponent } from './my-watchlist/my-watchlist.component';
 import { CarteiraAcoesComponent } from './carteira-acoes/carteira-acoes.component';
 import { ActionCardComponent } from './action-card/action-card.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { ActionCardComponent } from './action-card/action-card.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     HttpClientModule,
     AppRoutingModule,
     TooltipModule.forRoot(),
