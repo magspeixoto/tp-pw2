@@ -1,7 +1,9 @@
 * {
-    margin: 30px;
+    
 }
-
+.container {
+    
+}
 .watchlist-countainer{
     display: flex;
     flex-wrap: wrap;

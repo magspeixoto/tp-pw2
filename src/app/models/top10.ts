@@ -1,4 +1,5 @@
 export interface Top10 {
+    id?: number;
     api1: string;
     api2: string;
     api3: number;

@@ -1,37 +1,24 @@
 import { Injectable } from '@angular/core';
-import { Acoes } from '../models/acoes';
+import { HttpClient } from '@angular/common/http';
+import { Top10 } from '../models/top10';
 @Injectable({
   providedIn: 'root'
 })
+
 export class WatchlistServiceService {
-/*
-  constructor(private http: HttpClient) { }
-  
-  getWatchList(ticker:string){
-    return this.http.get<Acoes>(``);
-  }
-*/
-  
-  
-  /*
-  constructor(private http: HttpClient) {}
 
-  getMovieToWatchList(id: number) {
-    return this.http.get<Movie>(`http://localhost:3000/watchList/${id}`);
-  }
 
-  getWatchList(page: number) {
-    return this.http.get<Movie[]>(
-      `http://localhost:3000/watchList?_page=${page}&_limit=20`,
-      { observe: 'response' }
-    );
-  }
+    constructor(private http: HttpClient) { }
 
-  addMovieToWatchList(movie: Movie) {
-    return this.http.post<Movie>(`http://localhost:3000/watchList`, movie);
-  }
+    public getActionsWatchList(){
+      return this.http.get<Top10 []>(`http://localhost:3000/watchList`);
+    }
 
-  deleteMovieToWatchList(id: number) {
-    return this.http.delete(`http://localhost:3000/watchList/${id}`);
-  }*/
+    addActionToWatchList(acao: Top10) {
+      return this.http.post<Top10>(`http://localhost:3000/watchList`, acao);
+    }
+
+    deleteActionFromWatchList(id: number) {
+      return this.http.delete(`http://localhost:3000/watchList/${id}`);
+    } 
 }
