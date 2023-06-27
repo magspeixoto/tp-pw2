@@ -1,5 +1,6 @@
 
 <h1>My Watchlist </h1>
+
 <div class="watchlist-countainer">
   <div class="card-group">
     <div class="card">
@@ -28,3 +29,24 @@
     </div>
   </div>
 </div>
+<!--
+<div class="cards-container">
+  <div class="cards">
+    <app-movie-card
+      *ngFor="let movie of movies"
+      [movie]="movie"
+    ></app-movie-card>
+  </div>
+</div>
+
+<mat-paginator
+  class="paginator"
+  *ngIf="movies?.length"
+  [length]="totalResults"
+  [pageSize]="20"
+  [hidePageSize]="true"
+  aria-label="Select page"
+  (page)="getWatchList($event.pageIndex + 1)"
+>
+</mat-paginator>
+-->
