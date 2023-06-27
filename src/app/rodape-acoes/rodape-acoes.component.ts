@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { APICallService } from '../services/apicall.service';
-import { Acoes } from '../models/acoes';
 import { HttpClient } from '@angular/common/http';
+import { Top10 } from '../models/top10';
 
 @Component({
   selector: 'rodape-acoes',
@@ -9,56 +9,23 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./rodape-acoes.component.css']
 })
 export class RodapeAcoesComponent implements OnInit {
-  acoes: Acoes[] = [];
 
-  constructor(
-    private http: HttpClient,
-    private _apiservice: APICallService
-  ) {}
+  acoes: Top10[] = [];
 
-  ngOnInit() {
-    console.log('ngOnInit chamado');
+  constructor(private service: APICallService) {}
 
-    // Obtém os dados do arquivo JSON local
-    this.http
-      .get<Acoes[]>('assets/carteira_acoes.json')
-      .subscribe(
-        (data: Acoes[]) => {
-          this.acoes = data;
+  ngOnInit(): void {
+    console.log('ngOnInit called'); // Add this line to check if the method is being called
 
-          // Chama o método para obter dados da API para cada ação
-          this.fetchAcoesData();
-        },
-        (error: any) => {
-          console.error('Erro ao obter os dados iniciais:', error);
-        }
-      );
-  }
-
-  fetchAcoesData() {
-    // Itera sobre cada ação para obter dados da API
-    this.acoes.forEach((item: Acoes) => {
-      this._apiservice.getData(item.ticker).subscribe(
-        (response: any) => {
-          // Verifica se os dados de cotação são válidos
-          if (
-            response &&
-            response[0] !== null &&
-            response[0].latestPrice !== null &&
-            response[0].latestPrice !== undefined
-          ) {
-            const cotacao = parseFloat(response[0].latestPrice);
-            const nome = response[0].symbol;
-            item.api1 = cotacao;
-            item.ticker = nome;
-          } else {
-            console.log('Dados de cotação inválidos:', response);
-          }
-        },
-        (error: any) => {
-          console.log('Erro na chamada da API:', error);
-        }
-      );
+    this.service.getRodape().subscribe((response: any) => {
+      response.forEach((item: any) => {
+        const simbolo = item.symbol;
+        const nome = item.companyName;
+        const porcentagem = item.changePercent;
+        this.acoes.push({ api1: simbolo, api2: nome, api3: porcentagem });
+      });
+    }, (error) => {
+      console.error('Error fetching data:', error);
     });
   }
 }

@@ -1,15 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-interface Top10 {
-  api1: string;
-  api2: string;
-  api3: number;
-  api4: number;
-  api5: number;
-  api6: number;
-  api7: number;
-}
+import { Top10 } from '../models/top10';
 
 @Component({
   selector: 'app-pagina-inicial',
@@ -29,7 +20,7 @@ export class PaginaInicialComponent implements OnInit {
       response.forEach((item: any) => {
         const simbolo = item.symbol;
         const nome = item.companyName;
-        const abertura = item.previousClose;
+        const abertura = item.previousClose; 
         const ultimopreco = item.latestPrice;
         const mudanca = item.change;
         const porcentagem = item.changePercent;
