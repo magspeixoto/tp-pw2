@@ -1,24 +1,14 @@
 {
   "watchList": [
     {
-      "api1": "PLTR",
-      "api2": "Palantir Technologies Inc - Class A",
-      "api3": 13.94,
-      "api4": 14.61,
-      "api5": 0.67,
-      "api6": 0.04806,
-      "api7": 104170826,
+      "api1": "CCL",
+      "api2": "Carnival Corp. (Paired Stock)",
+      "api3": 14.6,
+      "api4": 15.89,
+      "api5": 1.29,
+      "api6": 0.08836,
+      "api7": 48421319,
       "id": 1
-    },
-    {
-      "api1": "AMD",
-      "api2": "Advanced Micro Devices Inc.",
-      "api3": 107.51,
-      "api4": 110.37,
-      "api5": 2.86,
-      "api6": 0.0266,
-      "api7": 78477671,
-      "id": 2
     }
   ]
 }

@@ -1,18 +1,6 @@
 
 <h1> My Watchlist </h1>
 
-<!-- <ng-container *ngFor="let action of acoesWatchList" style="width: 5rem;">
-  <div id="cardWl" class="card">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{action.api1}}</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      <button (click)="removeAction(action)" class="btn btn-primary">Remove Action</button>
-    </div>
-  </div>
-</ng-container> -->
-
 <ng-container class="container" *ngFor="let action of acoesWatchList" style="width: 5rem;">
   
   <div class="container-card">
@@ -26,17 +14,3 @@
     <button (click)="removeAction(action)" class="btn btn-primary">Remover Ação</button>
   </div>
 </ng-container>
-
-<!-- <div class="watchlist-countainer">
-  <div class="card-group">
-    <ng-container *ngFor="let action of acoesWatchList" class="card">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-        <p>{{action.api1}}</p>
-      </div>
-      <button (click)="removeAction(action)" >Remove Action</button>
-    </ng-container>
-  </div>
-</div> -->
