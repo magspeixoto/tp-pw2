@@ -1,145 +1,19 @@
 
-
-<table>
-  
-  <tr *ngFor="let post of posts">
-    <th>{{ post.ticker }}></th>
-  </tr>
-
 <div class="rodaperotativo">
-
   <div class="slider">
     <div class="slide-track">
-
-      <div class="slide">
+      <div class="slide" *ngFor="let acao of acoes">
         <p class="title-text">
-          <th>Nome API 1</th>
+          {{ acao.ticker }}
         </p>
         <p class="dados">
-          9,999
+          {{ acao.api1 }}
         </p>
       </div>
-
-      <div class="slide">
-        <p class="title-text">
-          Nome API 2
-        </p>
-        <p class="dados">
-          9,999
-        </p>
-      </div>
-
-      <div class="slide">
-        <p class="title-text">
-          Nome API 3
-        </p>
-        <p class="dados">
-          9,999
-        </p>
-      </div>
-
-      <div class="slide">
-        <p class="title-text">
-          Nome API 4
-        </p>
-        <p class="dados">
-          9,999
-        </p>
-      </div>
-
-      <div class="slide">
-        <p class="title-text">
-          Nome API 5
-        </p>
-        <p class="dados">
-          9,999
-        </p>
-      </div>
-
-      <div class="slide">
-        <p class="title-text">
-          Nome API 6
-        </p>
-        <p class="dados">
-          9,999
-        </p>
-      </div>
-
-      <div class="slide">
-        <p class="title-text">
-          Nome API 7
-        </p>
-        <p class="dados">
-          9,999
-        </p>
-      </div>
-
-      <div class="slide">
-        <p class="title-text">
-          Nome API 8
-        </p>
-        <p class="dados">
-          9,999
-        </p>
-      </div>
-
-      <div class="slide">
-        <p class="title-text">
-          Nome API 9
-        </p>
-        <p class="dados">
-          9,999
-        </p>
-      </div>
-
-      <div class="slide">
-        <p class="title-text">
-          Nome API 10
-        </p>
-        <p class="dados">
-          9,999
-        </p>
-      </div>
-
-      <div class="slide">
-        <p class="title-text">
-          Nome API 11
-        </p>
-        <p class="dados">
-          9,999
-        </p>
-      </div>
-
-      <div class="slide">
-        <p class="title-text">
-          Nome API 12
-        </p>
-        <p class="dados">
-          9,999
-        </p>
-      </div>
-
-      <div class="slide">
-        <p class="title-text">
-          Nome API 13
-        </p>
-        <p class="dados">
-          9,999
-        </p>
-      </div>
-
-      <div class="slide">
-        <p class="title-text">
-          Nome API 14
-        </p>
-        <p class="dados">
-          9,999
-        </p>
-      </div>
-      
     </div>
   </div>
 </div>
+
 
 <!--
     <div class="card">

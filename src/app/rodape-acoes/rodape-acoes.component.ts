@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { APICallService } from '../services/apicall.service';
-import { Acoes } from '../models/acoes'
-import { ActivatedRoute } from '@angular/router';
+import { Acoes } from '../models/acoes';
+import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'rodape-acoes',
   templateUrl: './rodape-acoes.component.html',
   styleUrls: ['./rodape-acoes.component.css']
 })
+export class RodapeAcoesComponent implements OnInit {
+  acoes: Acoes[] = [];
 
 export class RodapeAcoesComponent implements OnInit{
   showNotFound = false;
