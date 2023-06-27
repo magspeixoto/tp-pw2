@@ -3,8 +3,10 @@
 }
 .container {
     margin: 50px;
+    
+}
+.container-card{
     display: flex;
     flex-wrap: wrap;
     border: 1px solid black;
-    width: 400px;
 }
