@@ -25,7 +25,6 @@ export class RodapeAcoesComponent implements OnInit {
       .subscribe(
         (data: Acoes[]) => {
           this.acoes = data;
-          console.log(this.acoes);
 
           // Chama o método para obter dados da API para cada ação
           this.fetchAcoesData();
@@ -50,7 +49,6 @@ export class RodapeAcoesComponent implements OnInit {
           ) {
             const cotacao = parseFloat(response[0].latestPrice);
             const nome = response[0].symbol;
-            console.log('Cotação:', cotacao);
             item.api1 = cotacao;
             item.ticker = nome;
           } else {
@@ -61,6 +59,7 @@ export class RodapeAcoesComponent implements OnInit {
           console.log('Erro na chamada da API:', error);
         }
       );
+      
     });
   }
 }
