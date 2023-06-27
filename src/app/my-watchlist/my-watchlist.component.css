@@ -3,10 +3,12 @@
 }
 .container {
     margin: 50px;
-    
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
 }
 .container-card{
-    display: flex;
-    flex-wrap: wrap;
     border: 1px solid black;
+    display: flex;
+    flex-direction: row;
 }

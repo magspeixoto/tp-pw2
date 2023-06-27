@@ -1,23 +1,23 @@
 {
   "watchList": [
     {
-      "api1": "AAPL",
-      "api2": "Apple Inc",
-      "api3": 185.27,
-      "api4": 188.05,
-      "api5": 2.78,
-      "api6": 0.01501,
-      "api7": 64207627,
+      "api1": "PLTR",
+      "api2": "Palantir Technologies Inc - Class A",
+      "api3": 13.94,
+      "api4": 14.61,
+      "api5": 0.67,
+      "api6": 0.04806,
+      "api7": 104170826,
       "id": 1
     },
     {
-      "api1": "TSLA",
-      "api2": "Tesla Inc",
-      "api3": 241.05,
-      "api4": 250.14,
-      "api5": 9.09,
-      "api6": 0.03771,
-      "api7": 165998906,
+      "api1": "AMD",
+      "api2": "Advanced Micro Devices Inc.",
+      "api3": 107.51,
+      "api4": 110.37,
+      "api5": 2.86,
+      "api6": 0.0266,
+      "api7": 78477671,
       "id": 2
     }
   ]

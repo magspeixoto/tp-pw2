@@ -17,13 +17,13 @@
   
   <div class="container-card">
     <h5 class="card-title">{{action.api1}}</h5>
-    <p class="card-text">Empresa:{{action.api2}}</p>
-    <p class="card-text">Valor da abertura:{{action.api3}}</p>
-    <p class="card-text">Valor atual:{{action.api4}}</p>
-    <p class="card-text">Mudança:{{action.api5}}</p>
-    <p class="card-text">Mudança %:{{action.api6}}</p>
-    <p class="card-text">Volume total:{{action.api6}}</p>
-    <button (click)="removeAction(action)" class="btn btn-primary">Remove Action</button>
+    <p class="card-text">Nome: {{action.api2}}</p>
+    <p class="card-text">Valor da abertura: ${{action.api3}}</p>
+    <p class="card-text">Valor atual: ${{action.api4}}</p>
+    <p class="card-text">Mudança: ${{action.api5}}</p>
+    <p class="card-text">Mudança %: {{action.api6}}</p>
+    <p class="card-text">Volume total: ${{action.api7}}</p>
+    <button (click)="removeAction(action)" class="btn btn-primary">Remover Ação</button>
   </div>
 </ng-container>
 
