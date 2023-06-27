@@ -19,9 +19,9 @@ export class RodapeAcoesComponent implements OnInit {
     this.service.getRodape().subscribe((response: any) => {
       response.forEach((item: any) => {
         const simbolo = item.symbol;
-        const nome = item.companyName;
+        const preco = item.latestPrice;
         const porcentagem = item.changePercent;
-        this.acoes.push({ api1: simbolo, api2: nome, api3: porcentagem, api4: 0, api5: 0, api6: 0, api7: 0 });
+        this.acoes.push({ api1: simbolo, api2: "", api3: porcentagem, api4: preco, api5: 0, api6: 0, api7: 0 });
       });
     }, (error) => {
       console.error('Error fetching data:', error);
