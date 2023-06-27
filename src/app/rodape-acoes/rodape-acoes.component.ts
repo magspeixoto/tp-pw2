@@ -59,7 +59,6 @@ export class RodapeAcoesComponent implements OnInit {
           console.log('Erro na chamada da API:', error);
         }
       );
-      
     });
   }
 }
