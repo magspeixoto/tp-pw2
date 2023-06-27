@@ -8,6 +8,7 @@
   justify-content: center;
   flex-direction: column;
 }
+
 table {
   border: 10px solid red;
 }
@@ -78,23 +79,21 @@ table {
     display: flex;
     justify-content: center;
     border: 0.5px solid white;
-    background-color: #3d9ccf;
+    background-image: linear-gradient(#08699c, #02283e);
+    color: white;
   }
 }
 
-.title-text{
+.title-text {
   padding-right: 1rem;
   padding-top: 0.5rem;
-
-  color: #374151;
   font-weight: 130;
 }
 
-.dados{
+.dados {
   padding-top: 1rem;
-  color: #1F2937;
-  font-size: -0.75rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 900;
 }
 
 .title {
@@ -107,6 +106,13 @@ table {
 .title-text {
   margin-top: 0.5rem;
   padding-right: 1rem;
-  color: #374151;
   font-weight: 130;
+}
+
+.title-text.sigla {
+  font-weight: 400;
+}
+
+.title-text.nome {
+  text-decoration: underline;
 }
