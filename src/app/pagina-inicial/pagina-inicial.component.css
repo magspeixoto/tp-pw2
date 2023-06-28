@@ -33,3 +33,7 @@ button {
   .espaço {
     margin-top: 100px;
   }
+
+  .zero{
+    border: 0px;
+  }

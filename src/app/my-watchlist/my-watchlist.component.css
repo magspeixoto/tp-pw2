@@ -56,3 +56,10 @@
 .espaço {
   margin-top: 100px;
 }
+
+.titulo{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
