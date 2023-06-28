@@ -1,9 +1,11 @@
+
+
 <div class="title">
   <h1>Watchlist:</h1>
+  
 </div>
 
-
-
+<mat-paginator [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [length]="acoesWatchList.length" (page)="onPageChange($event)"></mat-paginator>
 <div class="container">
   <ng-container *ngFor="let action of pagedAcoesWatchList">
     <div class="card">
