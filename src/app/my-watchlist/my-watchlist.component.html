@@ -1,16 +1,31 @@
 
-<h1> My Watchlist </h1>
+ <h1>Watchlist</h1>
 
-<ng-container class="container" *ngFor="let action of acoesWatchList" style="width: 5rem;">
-  
-  <div class="container-card">
-    <h5 class="card-title">{{action.api1}}</h5>
-    <p class="card-text">Nome: {{action.api2}}</p>
-    <p class="card-text">Valor da abertura: ${{action.api3}}</p>
-    <p class="card-text">Valor atual: ${{action.api4}}</p>
-    <p class="card-text">Mudança: ${{action.api5}}</p>
-    <p class="card-text">Mudança %: {{action.api6}}</p>
-    <p class="card-text">Volume total: ${{action.api7}}</p>
-    <button (click)="removeAction(action)" class="btn btn-primary">Remover Ação</button>
-  </div>
-</ng-container>
+<div class="container">
+  <ng-container *ngFor="let action of acoesWatchList.slice(paginaAtual * tamanhoPagina, (paginaAtual + 1) * tamanhoPagina)">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{action.api1}}</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Valor da abertura: {{action.api3 | currency:'USD': 'symbol': '1.2-2'}}</li>
+        <li class="list-group-item">Valor atual: {{action.api4 | currency:'USD': 'symbol': '1.2-2'}}</li>
+        <li class="list-group-item">Mudança: {{action.api5 | currency:'USD': 'symbol': '1.2-2'}}</li>
+        <li class="list-group-item">Variação do dia: {{action.api6 | percent: '1.2-2'}}</li>
+        <li class="list-group-item">Volume total: {{action.api7 | currency:'USD': 'symbol': '1.2-2'}}</li>
+      </ul>
+      <div class="center-button">
+        <button (click)="removeAction(action)" class="btn btn-primary">Remover Ação</button>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<mat-paginator *ngIf="acoesWatchList?.length"
+  [length]="totalResults"
+  [pageSize]="tamanhoPagina"
+  [hidePageSize]="true"
+  aria-label="Select page"
+  (page)="getWatchList($event.pageIndex + 1)">
+</mat-paginator>
+
