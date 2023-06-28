@@ -1,6 +1,4 @@
-
-import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { WatchlistServiceService } from '../services/watchlist-service.service';
 import { Top10 } from '../models/top10';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
@@ -11,16 +9,16 @@ import { MatPaginator, PageEvent } from '@angular/material/paginator';
   styleUrls: ['./my-watchlist.component.css']
 })
 export class MyWatchlistComponent implements OnInit {
-  
+  @ViewChild(MatPaginator) paginator: MatPaginator;
   acoesWatchList: Top10[] = [];
+  pagedAcoesWatchList: Top10[] = [];
+  pageSizeOptions: number[] = [5, 10, 25, 100];
+  pageIndex = 0;
+  pageSize = 8;
 
-  constructor(
-    private watchListService: WatchlistServiceService,
-    private http: HttpClient
-  ) {}
+  constructor(private watchListService: WatchlistServiceService) {}
 
   ngOnInit(): void {
-    console.log('ngOnInit chamado'); // Imprime uma mensagem no console ao chamar o método ngOnInit
     this.getActions();
   }
 
@@ -31,6 +29,19 @@ export class MyWatchlistComponent implements OnInit {
   getActions(): void {
     this.watchListService.getActionsWatchList().subscribe(data => {
       this.acoesWatchList = data;
+      this.updatePageData();
     });
+  }
+
+  onPageChange(event: PageEvent): void {
+    this.pageIndex = event.pageIndex;
+    this.pageSize = event.pageSize;
+    this.updatePageData();
+  }
+
+  updatePageData(): void {
+    const startIndex = this.pageIndex * this.pageSize;
+    const endIndex = startIndex + this.pageSize;
+    this.pagedAcoesWatchList = this.acoesWatchList.slice(startIndex, endIndex);
   }
 }
