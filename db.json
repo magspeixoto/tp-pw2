@@ -1,3 +1,64 @@
 {
-  "watchList": []
+  "watchList": [
+    {
+      "api1": "CCL",
+      "api2": "Carnival Corp. (Paired Stock)",
+      "api3": 15.89,
+      "api4": 17.29,
+      "api5": 1.4,
+      "api6": 0.08811,
+      "api7": 49121837,
+      "id": 1
+    },
+    {
+      "api1": "MARA",
+      "api2": "Marathon Digital Holdings Inc",
+      "api3": 13.38,
+      "api4": 13.17,
+      "api5": -0.21,
+      "api6": -0.0157,
+      "api7": 44267859,
+      "id": 7
+    },
+    {
+      "api1": "CCL",
+      "api2": "Carnival Corp. (Paired Stock)",
+      "api3": 15.89,
+      "api4": 17.29,
+      "api5": 1.4,
+      "api6": 0.08811,
+      "api7": 49121837,
+      "id": 8
+    },
+    {
+      "api1": "AMD",
+      "api2": "Advanced Micro Devices Inc.",
+      "api3": 110.39,
+      "api4": 110.19,
+      "api5": -0.2,
+      "api6": -0.00181,
+      "api7": 77522870,
+      "id": 9
+    },
+    {
+      "api1": "PLTR",
+      "api2": "Palantir Technologies Inc - Class A",
+      "api3": 14.61,
+      "api4": 15.28,
+      "api5": 0.67,
+      "api6": 0.04586,
+      "api7": 101732811,
+      "id": 10
+    },
+    {
+      "api1": "NVDA",
+      "api2": "NVIDIA Corp",
+      "api3": 418.76,
+      "api4": 411.45,
+      "api5": -7.31,
+      "api6": -0.01746,
+      "api7": 54183015,
+      "id": 11
+    }
+  ]
 }
