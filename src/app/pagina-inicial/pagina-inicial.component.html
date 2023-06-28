@@ -22,7 +22,8 @@
         <td>{{item.api2}}</td>
         <td>{{item.api3 | currency:'USD': 'symbol': '1.2-2'}}</td>
         <td>{{item.api4 | currency:'USD': 'symbol': '1.2-2'}}</td>
-        <td>{{item.api5 | currency:'USD': 'symbol': '1.2-2'}}</td>
+        <td colspan="1" [ngStyle]="{ 'color': item.api5 >= 0 ? 'green' : 'red'}">
+          {{item.api5 | currency:'USD': 'symbol': '1.2-2'}}</td>
         <td colspan="1" [ngStyle]="{ 'background-color': item.api6 >= 0 ? 'green' : 'red', 'color': 'white' }">
           {{ item.api6 | percent: '1.2-2' }}</td>
         <td>{{item.api7 | currency:'USD': 'symbol': '1.2-2'}}</td>
