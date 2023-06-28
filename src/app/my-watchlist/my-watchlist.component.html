@@ -1,6 +1,8 @@
-<h1>Watchlist</h1>
+<div class="title">
+  <h1>Watchlist:</h1>
+</div>
 
-<mat-paginator [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [length]="acoesWatchList.length" (page)="onPageChange($event)"></mat-paginator>
+
 
 <div class="container">
   <ng-container *ngFor="let action of pagedAcoesWatchList">
@@ -13,7 +15,6 @@
         <li class="list-group-item">Valor atual: {{action.api4 | currency:'USD': 'symbol': '1.2-2'}}</li>
         <li class="list-group-item">Mudança: {{action.api5 | currency:'USD': 'symbol': '1.2-2'}}</li>
         <li class="list-group-item">Variação do dia: {{action.api6 | percent: '1.2-2'}}</li>
-        <li class="list-group-item">Volume total: {{action.api7 | currency:'USD': 'symbol': '1.2-2'}}</li>
       </ul>
       <div class="center-button">
         <button (click)="removeAction(action)" class="btn btn-primary">Remover Ação</button>
@@ -21,3 +22,5 @@
     </div>
   </ng-container>
 </div>
+<mat-paginator [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [length]="acoesWatchList.length" (page)="onPageChange($event)"></mat-paginator>
+<div class="espaço"> </div>

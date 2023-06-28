@@ -1,393 +1,51 @@
-.nav1 {
-  height: 80%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-
-  background-image: linear-gradient(#88a9bb, #3d9ccf, #08699c,#02283e);
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
+body{
+    background-color: #075d8b;
 
-.nav-item {
-  padding-top: 30px;
 }
-
-.nav-link {
-  color: white;
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #075d8b;
+    height: 75px;
 }
-
-/* Buttons NavBar */
-button {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    width: 85%;
-    height: 42.5%;
-    transition: .3s;
-
-    background: rgba(0,0,0,0.1);
-
-    font-size: 20px;
-  }
-  
-  button:hover {
-    background-color: rgb(0, 0, 0);
-    box-shadow: 0 0 0 5px rgb(0, 0, 0);
+.logo h2{
     color: #fff;
-  }
-
-
-
-/* CSS LOGO */
-.logo {
-    background-image: linear-gradient(white, #88a9bb);
-
-  height: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
+    letter-spacing: 6px;
+    cursor: pointer;
 }
 
-h1{
-    padding-top: 10px;
-    color: rgb(0, 0, 0);
+.itens {
+  background-color: blue;
+}
+.items ul a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    background-color: bisque;
+}
+.items ul a:hover{
+    color: rgb(179, 245, 245);
 }
 
-.loader {
-  position: relative;
-  width: 75px;
-  height: 100px;
+.button {
+  background-color: #033c5a; /* Cor de fundo */
+  border: none; /* Removendo a borda */
+  color: white; /* Cor do texto */
+  padding: 10px 20px; /* Espaçamento interno */
+  text-align: center; /* Alinhamento do texto */
+  text-decoration: none; /* Removendo a decoração de texto */
+  display: inline-block; /* Exibindo como bloco inline */
+  font-size: 16px; /* Tamanho da fonte */
+  border-radius: 5px;
 }
 
-.loader__bar {
-  position: absolute;
-  bottom: 0;
-  width: 10px;
-  height: 50%;
-  background: rgb(0, 0, 0);
-  transform-origin: center bottom;
-  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
-}
-
-.loader__bar:nth-child(1) {
-  left: 0px;
-  transform: scale(1, 0.2);
-  -webkit-animation: barUp1 4s infinite;
-  animation: barUp1 4s infinite;
-}
-
-.loader__bar:nth-child(2) {
-  left: 15px;
-  transform: scale(1, 0.4);
-  -webkit-animation: barUp2 4s infinite;
-  animation: barUp2 4s infinite;
-}
-
-.loader__bar:nth-child(3) {
-  left: 30px;
-  transform: scale(1, 0.6);
-  -webkit-animation: barUp3 4s infinite;
-  animation: barUp3 4s infinite;
-}
-
-.loader__bar:nth-child(4) {
-  left: 45px;
-  transform: scale(1, 0.8);
-  -webkit-animation: barUp4 4s infinite;
-  animation: barUp4 4s infinite;
-}
-
-.loader__bar:nth-child(5) {
-  left: 60px;
-  transform: scale(1, 1);
-  -webkit-animation: barUp5 4s infinite;
-  animation: barUp5 4s infinite;
-}
-
-.loader__ball {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  width: 10px;
-  height: 10px;
-  background: rgb(44, 143, 255);
-  border-radius: 50%;
-  -webkit-animation: ball624 4s infinite;
-  animation: ball624 4s infinite;
-}
-
-@keyframes ball624 {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  5% {
-    transform: translate(8px, -14px);
-  }
-
-  10% {
-    transform: translate(15px, -10px);
-  }
-
-  17% {
-    transform: translate(23px, -24px);
-  }
-
-  20% {
-    transform: translate(30px, -20px);
-  }
-
-  27% {
-    transform: translate(38px, -34px);
-  }
-
-  30% {
-    transform: translate(45px, -30px);
-  }
-
-  37% {
-    transform: translate(53px, -44px);
-  }
-
-  40% {
-    transform: translate(60px, -40px);
-  }
-
-  50% {
-    transform: translate(60px, 0);
-  }
-
-  57% {
-    transform: translate(53px, -14px);
-  }
-
-  60% {
-    transform: translate(45px, -10px);
-  }
-
-  67% {
-    transform: translate(37px, -24px);
-  }
-
-  70% {
-    transform: translate(30px, -20px);
-  }
-
-  77% {
-    transform: translate(22px, -34px);
-  }
-
-  80% {
-    transform: translate(15px, -30px);
-  }
-
-  87% {
-    transform: translate(7px, -44px);
-  }
-
-  90% {
-    transform: translate(0, -40px);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@-webkit-keyframes barUp1 {
-  0% {
-    transform: scale(1, 0.2);
-  }
-
-  40% {
-    transform: scale(1, 0.2);
-  }
-
-  50% {
-    transform: scale(1, 1);
-  }
-
-  90% {
-    transform: scale(1, 1);
-  }
-
-  100% {
-    transform: scale(1, 0.2);
-  }
-}
-
-@keyframes barUp1 {
-  0% {
-    transform: scale(1, 0.2);
-  }
-
-  40% {
-    transform: scale(1, 0.2);
-  }
-
-  50% {
-    transform: scale(1, 1);
-  }
-
-  90% {
-    transform: scale(1, 1);
-  }
-
-  100% {
-    transform: scale(1, 0.2);
-  }
-}
-
-@-webkit-keyframes barUp2 {
-  0% {
-    transform: scale(1, 0.4);
-  }
-
-  40% {
-    transform: scale(1, 0.4);
-  }
-
-  50% {
-    transform: scale(1, 0.8);
-  }
-
-  90% {
-    transform: scale(1, 0.8);
-  }
-
-  100% {
-    transform: scale(1, 0.4);
-  }
-}
-
-@keyframes barUp2 {
-  0% {
-    transform: scale(1, 0.4);
-  }
-
-  40% {
-    transform: scale(1, 0.4);
-  }
-
-  50% {
-    transform: scale(1, 0.8);
-  }
-
-  90% {
-    transform: scale(1, 0.8);
-  }
-
-  100% {
-    transform: scale(1, 0.4);
-  }
-}
-
-@-webkit-keyframes barUp3 {
-  0% {
-    transform: scale(1, 0.6);
-  }
-
-  100% {
-    transform: scale(1, 0.6);
-  }
-}
-
-@keyframes barUp3 {
-  0% {
-    transform: scale(1, 0.6);
-  }
-
-  100% {
-    transform: scale(1, 0.6);
-  }
-}
-
-@-webkit-keyframes barUp4 {
-  0% {
-    transform: scale(1, 0.8);
-  }
-
-  40% {
-    transform: scale(1, 0.8);
-  }
-
-  50% {
-    transform: scale(1, 0.4);
-  }
-
-  90% {
-    transform: scale(1, 0.4);
-  }
-
-  100% {
-    transform: scale(1, 0.8);
-  }
-}
-
-@keyframes barUp4 {
-  0% {
-    transform: scale(1, 0.8);
-  }
-
-  40% {
-    transform: scale(1, 0.8);
-  }
-
-  50% {
-    transform: scale(1, 0.4);
-  }
-
-  90% {
-    transform: scale(1, 0.4);
-  }
-
-  100% {
-    transform: scale(1, 0.8);
-  }
-}
-
-@-webkit-keyframes barUp5 {
-  0% {
-    transform: scale(1, 1);
-  }
-
-  40% {
-    transform: scale(1, 1);
-  }
-
-  50% {
-    transform: scale(1, 0.2);
-  }
-
-  90% {
-    transform: scale(1, 0.2);
-  }
-
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-@keyframes barUp5 {
-  0% {
-    transform: scale(1, 1);
-  }
-
-  40% {
-    transform: scale(1, 1);
-  }
-
-  50% {
-    transform: scale(1, 0.2);
-  }
-
-  90% {
-    transform: scale(1, 0.2);
-  }
-
-  100% {
-    transform: scale(1, 1);
-  }
+.button:hover {
+  background-color: black; /* Cor de fundo ao passar o mouse */
 }

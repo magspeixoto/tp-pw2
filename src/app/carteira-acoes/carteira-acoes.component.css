@@ -1,11 +1,18 @@
 .content{
-    margin: 100px;
+    margin: 50px;
+    margin-bottom: 200px;
 }
 
 .title{
-    margin: 100px;
+    margin: 50px;
+    text-align: center;
 }
 
+
 .zero{
-    border: 0px;
+    border: 50px;
 }
+
+.espaço {
+    margin-top: 100px;
+  }

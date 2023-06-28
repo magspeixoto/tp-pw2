@@ -12,7 +12,6 @@ import { RodapeAcoesComponent } from './rodape-acoes/rodape-acoes.component';
 import { NovaCarteiraComponent } from './nova-carteira/nova-carteira.component';
 import { MyWatchlistComponent } from './my-watchlist/my-watchlist.component';
 import { CarteiraAcoesComponent } from './carteira-acoes/carteira-acoes.component';
-import { ActionCardComponent } from './action-card/action-card.component';
 import { CommonModule } from '@angular/common';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
@@ -26,8 +25,7 @@ import { MatIconModule } from '@angular/material/icon';
     RodapeAcoesComponent,
     NovaCarteiraComponent,
     MyWatchlistComponent,
-    CarteiraAcoesComponent,
-    ActionCardComponent
+    CarteiraAcoesComponent
   ],
   imports: [
     BrowserModule,
@@ -43,4 +41,4 @@ import { MatIconModule } from '@angular/material/icon';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { }

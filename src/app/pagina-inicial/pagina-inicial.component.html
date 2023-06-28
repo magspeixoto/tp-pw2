@@ -17,7 +17,8 @@
     </thead>
     <tbody>
       <tr *ngFor="let item of acoes">
-        <button (click)="adicionarAcao(item)" class="btn btn-primary">Seguir Ação</button><td>{{item.api1}}</td>
+        <button (click)="adicionarAcao(item)" class="btn btn-primary">Seguir Ação</button>
+        <td>{{item.api1}}</td>
         <td>{{item.api2}}</td>
         <td>{{item.api3 | currency:'USD': 'symbol': '1.2-2'}}</td>
         <td>{{item.api4 | currency:'USD': 'symbol': '1.2-2'}}</td>
@@ -28,5 +29,6 @@
       </tr>
     </tbody>
   </table>
+  <div class="espaço"> </div>
 </div>
 

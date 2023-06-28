@@ -1,50 +1,58 @@
-.paginator-container {
+
+
+.paginator-buttons {
   display: flex;
+}
+
+.caixa {
+  background-color: white;
+  text-align: center;
+}
+.title{
+  margin: 50px;
+  text-align: center;
+}
+
+.container {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
 }
 
 .paginator-buttons {
   display: flex;
 }
 
-.paginator-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .card {
-  width: 250px;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-body {
-  text-align: center;
+  background-color: #075d8b;
+  flex-grow: 1;
 }
 
 .card-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.list-group-item {
-  padding: 5px;
+  color: white;
 }
 
 .center-button {
   display: flex;
-  justify-content: center;
-  margin-top: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-button button {
+  margin: 10px;
+  background-color: #075d8b;
+  border: none;
+  color:white;
+}
+
+.espaço {
+  margin-top: 100px;
 }

@@ -42,6 +42,5 @@ export class MyWatchlistComponent implements OnInit {
   updatePageData(): void {
     const startIndex = this.pageIndex * this.pageSize;
     const endIndex = startIndex + this.pageSize;
-    this.pagedAcoesWatchList = this.acoesWatchList.slice(startIndex, endIndex);
-  }
+    this.pagedAcoesWatchList = this.acoesWatchList.slice(startIndex, endIndex);}
 }

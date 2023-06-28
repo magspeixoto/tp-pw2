@@ -1,45 +1,24 @@
-<div class="logo">
-  <div class="loader">
-    <div class="loader__bar"></div>
-    <div class="loader__bar"></div>
-    <div class="loader__bar"></div>
-    <div class="loader__bar"></div>
-    <div class="loader__bar"></div>
-    <div class="loader__ball"></div>
+<div class="navbar">
+  <div class="logo">
+      <h2>Bolsa de valores</h2>
   </div>
-  <h1>Bolsa de Valores</h1>
-</div>
-
-<div class="nav1">
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page">
-        <button [routerLink]="['/pagina-inicial']" routerLinkActive="activebutton" (click)="reloadPage('/pagina-inicial')">
-          Página Inicial
-        </button>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link">
-        <button [routerLink]="['/comprar-acoes']" routerLinkActive="activebutton" (click)="reloadPage('/comprar-acoes')">
-          Ações
-        </button>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link">
-        <button [routerLink]="['/carteira-acoes']" routerLinkActive="activebutton" (click)="reloadPage('/carteira-acoes')">
-          Carteira
-        </button>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link">
-        <button [routerLink]="['/my-watchlist']" routerLinkActive="activebutton" (click)="reloadPage('/my-watchlist')">
-          My WatchList
-        </button>
-      </a>
-    </li>
-
-  </ul>
+  <div class="items">
+      <ul>
+        <a>
+          <button class="button" [routerLink]="['/pagina-inicial']"  (click)="reloadPage('/pagina-inicial')">
+            Página Inicial
+          </button>
+        </a>
+        <a>
+          <button class="button" [routerLink]="['/carteira-acoes']"  (click)="reloadPage('/carteira-acoes')">
+            Carteira
+          </button>
+        </a>
+        <a>
+          <button class="button" [routerLink]="['/my-watchlist']"  (click)="reloadPage('/my-watchlist')">
+            WatchList
+          </button>
+        </a>
+      </ul>
+  </div>
 </div>
