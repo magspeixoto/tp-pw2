@@ -37,4 +37,20 @@ export class CarteiraAcoesComponent implements OnInit {
       }
     );
   }
+  getTotal(): number {
+    let total = 0;
+    for (const item of this.acoes) {
+      total += item.quantidade * item.preco_unitario;
+    }
+    return total;
+  }
+
+  getTotalAtual(): number {
+    let total = 0;
+    for (const item of this.acoes) {
+      total += item.quantidade * item.api1;
+    }
+    return total;
+  }
+  
 }

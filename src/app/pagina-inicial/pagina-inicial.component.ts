@@ -16,7 +16,7 @@ export class PaginaInicialComponent implements OnInit {
   ngOnInit(): void {
     console.log('ngOnInit called'); // Add this line to check if the method is being called
 
-    const url = `https://api.iex.cloud/v1/data/core/stock_collection/list?collectionName=mostactive&token=sk_e511acd46d734053beec96a280678778`;
+    const url = `https://cloud.iexapis.com/stable/stock/market/list/mostactive?token=sk_e511acd46d734053beec96a280678778`;
     this.http.get(url).subscribe((response: any) => {
       response.forEach((item: any) => {
         const simbolo = item.symbol;
