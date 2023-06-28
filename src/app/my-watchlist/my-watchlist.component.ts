@@ -14,7 +14,7 @@ export class MyWatchlistComponent implements OnInit {
   pagedAcoesWatchList: Top10[] = [];
   pageSizeOptions: number[] = [5, 10, 25, 100];
   pageIndex = 0;
-  pageSize = 8;
+  pageSize = 5;
 
   constructor(private watchListService: WatchlistServiceService) {}
 
