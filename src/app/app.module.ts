@@ -14,7 +14,8 @@ import { MyWatchlistComponent } from './my-watchlist/my-watchlist.component';
 import { CarteiraAcoesComponent } from './carteira-acoes/carteira-acoes.component';
 import { ActionCardComponent } from './action-card/action-card.component';
 import { CommonModule } from '@angular/common';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,10 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     CommonModule,
     HttpClientModule,
+    MatPaginatorModule,
+    MatIconModule,
     AppRoutingModule,
+    MatPaginatorModule,
     TooltipModule.forRoot(),
     BrowserAnimationsModule
   ],

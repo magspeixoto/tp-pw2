@@ -1,37 +1,50 @@
-.caixa {
-    background-color: black;
+.paginator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
 
+.paginator-buttons {
+  display: flex;
 }
-  
-  .card {
-    width: 270px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .card-body {
-    background-color: #67a3c5;
-    flex-grow: 1;
-  }
-  
-  .card-title {
-    color: white;
-  }
-  
-  .center-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .center-button button {
-    margin: 10px;
-    background-color: #67a3c5;
-    border: none;
-    color: white;
-  }
+
+.paginator-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 250px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.list-group-item {
+  padding: 5px;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
