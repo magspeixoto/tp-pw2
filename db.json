@@ -1,14 +1,3 @@
 {
-  "watchList": [
-    {
-      "api1": "CCL",
-      "api2": "Carnival Corp. (Paired Stock)",
-      "api3": 14.6,
-      "api4": 15.89,
-      "api5": 1.29,
-      "api6": 0.08836,
-      "api7": 48421319,
-      "id": 1
-    }
-  ]
+  "watchList": []
 }
