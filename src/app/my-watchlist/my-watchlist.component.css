@@ -1,8 +1,15 @@
 * {
-    margin: 30px;
+    margin: 40px;
 }
-
-.watchlist-countainer{
+.container {
+    margin: 50px;
     display: flex;
+    justify-content:center;
     flex-wrap: wrap;
+    
+}
+.container-card{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
 }
