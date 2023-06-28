@@ -11,10 +11,7 @@ import { MatPaginator, PageEvent } from '@angular/material/paginator';
   styleUrls: ['./my-watchlist.component.css']
 })
 export class MyWatchlistComponent implements OnInit {
-  paginaAtual = 0; // Página atual inicializada como 0
-  tamanhoPagina = 5; // Número de itens por página
-  totalResults: number;
-  public selectedSortOption: string = 'id';
+  
   acoesWatchList: Top10[] = [];
 
   constructor(
@@ -34,30 +31,6 @@ export class MyWatchlistComponent implements OnInit {
   getActions(): void {
     this.watchListService.getActionsWatchList().subscribe(data => {
       this.acoesWatchList = data;
-      this.totalResults = data.length;
     });
   }
-
-  getWatchList(page: number = 1): void {
-    const url = `api/watchlist?page=${page}`;
-    this.http.get<Top10[]>(url).subscribe(
-      (data: Top10[]) => {
-        this.acoesWatchList = data;
-        this.totalResults = data.length;
-      },
-      (error: any) => {
-        console.error(error);
-      }
-    );
-  }
-  onPageChange(event: PageEvent): void {
-    this.paginaAtual = event.pageIndex;
-    this.tamanhoPagina = event.pageSize;
-    this.getWatchList(this.paginaAtual + 1); // Atualiza a lista com a nova página selecionada
-  }
 }
-
-
-
-
-
